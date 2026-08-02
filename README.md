@@ -24,7 +24,7 @@ Open `http://localhost:3000`
 
 ## System
 
-Built without external UI frameworks (React, Vue, etc.)
+Built without external UI frameworks (React, Vue, etc.) on pure HTML/CSS/JS
 
 * **DOM Window Manager**: A custom-engineered windowing. Has  main window focus, dragging and 3 distinct virtual workspaces.
 * **Virtual File System** : Records file read/write operations and stores it to `localStorage`, allowing persistent file storage without a backend.
