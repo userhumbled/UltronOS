@@ -1,0 +1,48 @@
+<div class="calc-container">
+                    <div class="calc-display">
+                        <div class="calc-history" id="calc-history-${containerId}"></div>
+                        <div class="calc-current" id="calc-current-${containerId}">0</div>
+                    </div>
+                    <div class="calc-tabs">
+                        <button class="calc-tab active" onclick="document.getElementById('${containerId}')._setMode('basic', this)">Basic</button>
+                        <button class="calc-tab" onclick="document.getElementById('${containerId}')._setMode('sci', this)">Scientific</button>
+                    </div>
+                    
+                    <div class="calc-sci" id="calc-sci-${containerId}">
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('sin(')">sin</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('cos(')">cos</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('tan(')">tan</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('log(')">log</button>
+                        
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('sqrt(')">\u221A</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('^')">x\u00B2</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('(')">(</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input(')')">)</button>
+                    </div>
+                    
+                    <div class="calc-grid">
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._clear()">C</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._del()">DEL</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('%')">%</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('/')">/</button>
+                        
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('7')">7</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('8')">8</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('9')">9</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('*')">X</button>
+                        
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('4')">4</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('5')">5</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('6')">6</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('-')">-</button>
+                        
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('1')">1</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('2')">2</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('3')">3</button>
+                        <button class="calc-btn op" onclick="document.getElementById('${containerId}')._input('+')">+</button>
+                        
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('0')">0</button>
+                        <button class="calc-btn" onclick="document.getElementById('${containerId}')._input('.')">.</button>
+                        <button class="calc-btn eq" onclick="document.getElementById('${containerId}')._eval()">=</button>
+                    </div>
+                </div>

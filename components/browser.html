@@ -1,0 +1,70 @@
+<div class="browser-container">
+                    <div class="browser-topbar">
+                        <div class="browser-tabs">
+                            <div class="browser-tab" id="tab-wiki-${containerId}" onclick="document.getElementById('${containerId}')._switchTab('wiki')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                Wikipedia (Local)
+                            </div>
+                            <div class="browser-tab active" id="tab-new-${containerId}" onclick="document.getElementById('${containerId}')._switchTab('new')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                                New Tab
+                            </div>
+                        </div>
+                        <div class="browser-toolbar">
+                            <button class="browser-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></button>
+                            <button class="browser-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                            <button class="browser-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></button>
+                            <div class="browser-address-bar">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                <input type="text" class="browser-address-input" id="url-input-${containerId}" value="chrome://newtab" onkeydown="if(event.key === 'Enter') document.getElementById('${containerId}')._doSearch(this.value)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="browser-content">
+                        
+                        <div class="browser-tab-pane" id="pane-wiki-${containerId}" style="background:#fff; color:#333; padding:40px; overflow-y:auto; font-family: sans-serif;">
+                            <h1 style="border-bottom:1px solid #ccc; padding-bottom:10px; font-family: serif; font-size:32px;">Ultron OS</h1>
+                            <p style="font-size:14px; line-height:1.6; color:#222;"><b>Ultron OS</b> is a next-generation conceptual operating system built by the Google DeepMind agentic coding team. It runs entirely inside a web browser using native web technologies such as HTML, CSS, and vanilla JavaScript.</p>
+                            <h2 style="font-family: serif; margin-top:30px; border-bottom:1px solid #ccc; padding-bottom:5px;">Architecture</h2>
+                            <p style="font-size:14px; line-height:1.6; color:#222;">The system implements a fully functional Window Manager capable of dragging, dropping, maximizing, and minimizing windows. It utilizes heavy glassmorphic rendering techniques to achieve a highly premium aesthetic.</p>
+                            <div style="background:#f8f9fa; border:1px solid #eaecf0; padding:15px; margin-top:20px; font-size:13px;">
+                                <i>Contents:</i>
+                                <ul style="color:#0645ad; padding-left:20px; margin-top:10px;">
+                                    <li>1. History</li>
+                                    <li>2. Technical Design</li>
+                                    <li>3. Built-in Applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="browser-tab-pane active" id="pane-new-${containerId}">
+                            <div class="new-tab-page">
+                                <div class="google-logo">Google</div>
+                                <div class="search-box-container">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                    <input type="text" placeholder="Search Google or type a URL" id="search-input-${containerId}" onkeydown="if(event.key === 'Enter') document.getElementById('${containerId}')._doSearch(this.value)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" width="20" height="20"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                                </div>
+                                
+                                <div class="shortcut-grid">
+                                    <div class="shortcut-item">
+                                        <div class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+                                        <span class="shortcut-text">Analytics</span>
+                                    </div>
+                                    <div class="shortcut-item">
+                                        <div class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+                                        <span class="shortcut-text">Workspace</span>
+                                    </div>
+                                    <div class="shortcut-item">
+                                        <div class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                                        <span class="shortcut-text">Calendar</span>
+                                    </div>
+                                    <div class="shortcut-item">
+                                        <div class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+                                        <span class="shortcut-text">Add Shortcut</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
