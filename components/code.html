@@ -1,0 +1,11 @@
+<div class="app-code">
+                    <div class="code-toolbar">
+                        <input type="text" id="code-filename-${containerId}" placeholder="filename.txt" style="background:transparent; border:1px solid var(--border-subtle); color:#fff; padding:2px 5px; outline:none; font-size:12px;">
+                        <button onclick="document.getElementById('${containerId}')._save()">Save</button>
+                        <span id="code-msg-${containerId}" style="font-size:11px; color:var(--accent-gold)"></span>
+                    </div>
+                    <div class="code-editor-area">
+                        <div class="code-lines" id="code-lines-${containerId}">1</div>
+                        <textarea class="code-textarea" id="code-text-${containerId}"></textarea>
+                    </div>
+                </div>

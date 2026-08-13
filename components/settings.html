@@ -1,0 +1,79 @@
+<div class="settings-container">
+                    <div class="settings-sidebar">
+                        <div class="settings-sidebar-item active" onclick="document.getElementById('${containerId}')._switchTab('pers')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Personalisation
+                        </div>
+                        <div class="settings-sidebar-item" onclick="document.getElementById('${containerId}')._switchTab('adv')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            Advanced
+                        </div>
+                    </div>
+                    <div class="settings-content">
+                        <div class="settings-pane active" id="pane-pers-${containerId}">
+                            <div class="settings-header">Personalisation</div>
+                            
+                            <div class="settings-section">
+                                <div class="settings-section-title">Background Wallpaper</div>
+                                <div class="wallpaper-grid">
+                                    <div class="wallpaper-card active" style="background-image: url('assets/wallpapers/wallpaper.png');" onclick="changeWallpaper(this, 'assets/wallpapers/wallpaper.png')"></div>
+                                    <div class="wallpaper-card" style="background-image: url('assets/wallpapers/wallpaper1.png');" onclick="changeWallpaper(this, 'assets/wallpapers/wallpaper1.png')"></div>
+                                    <div class="wallpaper-card" style="background-image: url('assets/wallpapers/wallpaper2.png');" onclick="changeWallpaper(this, 'assets/wallpapers/wallpaper2.png')"></div>
+                                    <div class="wallpaper-card" style="background-image: url('assets/wallpapers/wallpaper3.png');" onclick="changeWallpaper(this, 'assets/wallpapers/wallpaper3.png')"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-pane" id="pane-adv-${containerId}">
+                            <div class="settings-header">Advanced</div>
+                            
+                            <div class="settings-section">
+                                <div class="settings-section-title">System Theme Engine</div>
+                                <div class="theme-grid">
+                                    <div class="theme-card active" onclick="changeTheme(this, 'gold')">
+                                        <div class="theme-color-circle" style="background: #FFD700;"></div>
+                                        <div>
+                                            <div style="font-weight:bold;">Ultron Gold</div>
+                                            <div style="font-size:12px; color:var(--text-muted);">Default</div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card" onclick="changeTheme(this, 'cyan')">
+                                        <div class="theme-color-circle" style="background: #00E5FF;"></div>
+                                        <div>
+                                            <div style="font-weight:bold;">Neon Cyan</div>
+                                            <div style="font-size:12px; color:var(--text-muted);">Deep Space</div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card" onclick="changeTheme(this, 'crimson')">
+                                        <div class="theme-color-circle" style="background: #FF2A2A;"></div>
+                                        <div>
+                                            <div style="font-weight:bold;">Crimson Forge</div>
+                                            <div style="font-size:12px; color:var(--text-muted);">Dark Red</div>
+                                        </div>
+                                    </div>
+                                    <div class="theme-card" onclick="changeTheme(this, 'arctic')">
+                                        <div class="theme-color-circle" style="background: #FFFFFF;"></div>
+                                        <div>
+                                            <div style="font-weight:bold;">Arctic Silver</div>
+                                            <div style="font-size:12px; color:var(--text-muted);">Light Glass</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <div class="settings-section-title">Glassmorphism Physics</div>
+                                
+                                <div class="settings-slider-container">
+                                    <div class="settings-slider-label">Opacity (Alpha)</div>
+                                    <input type="range" min="10" max="90" value="45" class="settings-slider" id="slider-opacity-${containerId}" oninput="document.documentElement.style.setProperty('--window-opacity', this.value / 100)">
+                                </div>
+                                
+                                <div class="settings-slider-container">
+                                    <div class="settings-slider-label">Background Blur</div>
+                                    <input type="range" min="0" max="100" value="70" class="settings-slider" id="slider-blur-${containerId}" oninput="document.documentElement.style.setProperty('--window-blur', this.value + 'px')">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>

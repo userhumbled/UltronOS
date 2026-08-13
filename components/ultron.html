@@ -1,0 +1,16 @@
+<div class="ultron-app">
+                    <div class="ultron-chat">
+                        <div class="ultron-chat-log" id="ultron-log-${containerId}">
+                            <div class="ultron-msg ai">System Online. Awaiting directive...</div>
+                        </div>
+                        <div class="ultron-input-container">
+                            <input type="text" class="ultron-input" id="ultron-input-${containerId}" placeholder="Enter command directive..." autocomplete="off">
+                            <button class="ultron-send" id="ultron-send-${containerId}">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ultron-canvas-container" id="ultron-canvas-container-${containerId}">
+                        <canvas id="ultron-canvas-${containerId}" class="ultron-canvas"></canvas>
+                    </div>
+                </div>

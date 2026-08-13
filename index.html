@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltronOS</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="top-bar">
+        <div class="top-workspaces">
+            <div class="top-ws-btn active">WS-A</div>
+            <div class="top-ws-btn">WS-B</div>
+            <div class="top-ws-btn">WS-C</div>
+        </div>
+        <div class="top-bar-center">
+            
+        </div>
+        <div class="top-bar-right">
+            <div class="top-status-dot"></div>
+            <span>SYS_LINK : ACTIVE</span>
+        </div>
+    </div>
+    <div id="boot-screen">
+        <div id="boot-log"></div>
+    </div>
+    <div id="desktop-bg">
+        <canvas id="desktop-matrix-canvas" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none; opacity: 0; transition: opacity 0.5s;"></canvas>
+    </div>
+    <div id="desktop">
+        
+        <div id="desktop-widgets">
+            
+            <div class="widget-panel" id="widget-weather-new">
+                <div class="weather-header">
+                    <div class="weather-date-stack">
+                        <span class="cal-day-text" id="cal-d">MON</span>
+                        <span class="cal-date-text" id="cal-num">24</span>
+                        <span class="cal-month-text" id="cal-m">AUG 2026</span>
+                    </div>
+                    <span class="weather-icon" id="w-icon">⛅</span>
+                </div>
+                <div class="weather-main">
+                    <span class="weather-temp" id="w-temp">72°</span>
+                </div>
+                <div class="weather-details">
+                    <span class="w-detail-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        <span id="w-rain">12%</span>
+                    </span>
+                    <span class="w-detail-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                        <span id="w-wind">8mph</span>
+                    </span>
+                </div>
+            </div>
+            <div class="widget-panel" id="widget-visualizer-panel">
+                <div class="viz-header">SYS_AUDIO_STREAM</div>
+                <canvas id="sys-visualizer" width="200" height="60"></canvas>
+            </div>
+        </div>
+        <div id="snap-guide"></div>
+    </div>
+    <div id="start-menu">
+        <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Type here to search">
+        </div>
+        <div style="margin-bottom: 12px; font-size: 13px; font-weight: bold;">Pinned</div>
+        <div class="pinned-apps" id="start-pinned-apps">
+            
+        </div>
+        <div class="start-footer">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                <span>Admin</span>
+            </div>
+            <button class="power-btn" onclick="location.reload()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+            </button>
+        </div>
+    </div>
+    <div id="taskbar">
+        <div style="width:150px;"></div> 
+        <div class="taskbar-center" id="taskbar-apps">
+            <div class="taskbar-item start-btn" id="start-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            
+        </div>
+        <div class="system-tray">
+            <div class="tray-icons">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"></rect><line x1="22" y1="11" x2="22" y2="13"></line><rect x="4" y="9" width="12" height="6"></rect></svg>
+            </div>
+            <div class="clock-container">
+                <span id="tray-time">00:00</span>
+                <span id="tray-date">YYYY-MM-DD</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/engine.js?v=6"></script>
+    
+    <div id="lock-screen-overlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" width="64" height="64" style="filter: drop-shadow(0 0 10px #FFD700); margin-bottom: 20px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <div style="font-size: 24px; font-weight: bold; letter-spacing: 2px; color: var(--accent-gold); text-shadow: 0 0 10px var(--accent-gold);">SYSTEM LOCKED</div>
+        <div style="font-size: 13px; color: var(--text-muted); margin-top: 5px;">Enter 'unlock' to restore access.</div>
+        <input type="password" id="lock-input" placeholder="PASSKEY">
+    </div>
+    <div id="orb-container" onclick="speakHelp()">
+        <div id="orb-core"></div>
+        <div id="orb-highlight"></div>
+        <div id="orb-rim"></div>
+    </div>
+    
+</body>
+</html>
