@@ -5,8 +5,7 @@
 
 ![UltronOS Hero Screenshot](assets/mainn.png)
 
-##  Live Demo
-[**Watch the demo video**](https://drive.google.com/file/d/14IgeUNn1ixcNtV0dWVF-dadHukLHW49Y/view)
+
 
 [**Then try UltronOS**](https://hhhavvproject.vercel.app/)
 -
